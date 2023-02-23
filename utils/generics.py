@@ -29,7 +29,8 @@ def linear_velocity(delta_displacement, delta_time):
 def displacement_coordinates(point_A: tuple, point_B: tuple):
     """
     point struct: (x,y)
-    returns the linear displacement of a particles given an initial and final cartesian coordinates information
+    returns the linear displacement of a particles given an initial and final positions.
+    position is expressed in cartesian coordinates
     :param point_A:
     :param point_B:
     :return:
@@ -70,3 +71,27 @@ def time_duration(initial_velocity, final_velocity, acceleration):
     """
     time_durationn = delta(initial_velocity, final_velocity) / acceleration
     return time_durationn
+
+
+def jerk(acceleration, time_duration):
+    """
+    jerk is the rate of change acceleration,
+    can be computed from the third order derivative of acceleration
+    :param acceleration:
+    :param time_duration:
+    :return:
+    """
+    return acceleration/time_duration
+
+
+def jounce(jerk, time_duration):
+    """
+    jounce is the rate of change of jerk,
+    can be computed from the fourth order derivative of acceleration
+    :param jerk:
+    :param time_duration:
+    :return:
+    """
+    return jerk/time_duration
+
+
