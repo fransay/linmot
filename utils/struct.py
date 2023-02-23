@@ -29,3 +29,4 @@ class Point(object):
         :return:
         """
         return {"x": self.x, "y": self.y}
+
