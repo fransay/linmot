@@ -6,6 +6,11 @@ from utils.generics import delta
 
 
 class Particle(object):
+    """
+    standard symbols for quantities
+    initial velocity (u)
+    final velocity (v)
+    """
     def __int__(self, initial_velocity, final_velocity, duration_in_seconds):
         self.init_velocity = initial_velocity
         self.fin_velocity = final_velocity
@@ -21,6 +26,10 @@ class Particle(object):
 
     def linear_distance(self):
         """
-        linear s
+        returns the linear distance(s) using the equation (v^2 - u^2)/2a
         :return:
         """
+        lin_dist = (self.final_velocity**2 - self.init_velocity**2) / 2 * self.acceleration()
+        return lin_dist
+
+
