@@ -57,3 +57,29 @@ class Particle(object):
         change_in_time = delta(initial_time, final_time)
         change_in_velocity = delta(self.init_velocity, self.fin_velocity)
         return change_in_velocity/change_in_time
+
+    # include setter methods
+
+    def set_new_initial_velocity(self, new_initial_velocity):
+        """
+        set old initial velocity to new initial velocity
+        """
+        self.init_velocity = new_initial_velocity
+
+    def set_new_final_velocity(self, new_final_velocity):
+        """
+        set old final velocity to new initial velocity
+        """
+        self.fin_velocity = new_final_velocity
+
+    def set_new_time_duration_in_seconds(self, new_time_duration):
+        """
+        set old time duration to new time duration
+        time must be in seconds
+        """
+        self.dur = new_time_duration
+
+
+
+
+
