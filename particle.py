@@ -78,8 +78,3 @@ class Particle(object):
         time must be in seconds
         """
         self.dur = new_time_duration
-
-
-
-
-
